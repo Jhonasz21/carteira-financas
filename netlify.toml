@@ -1,0 +1,8 @@
+[build]
+  command = "node scripts/netlify-build.mjs"
+  publish = "dist"
+
+[[headers]]
+  for = "/firebase-messaging-sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
