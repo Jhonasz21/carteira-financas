@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: carteira-financas-api
+    runtime: python
+    plan: free
+    rootDir: render-server
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: APP_ORIGIN
+        value: https://imaginative-hamster-ad00a3.netlify.app
+      - key: APP_PASSWORD_HASH
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: FIREBASE_CREDENTIALS_PATH
+        sync: false
