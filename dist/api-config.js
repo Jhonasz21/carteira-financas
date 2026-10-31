@@ -1,6 +1,6 @@
 "use strict";
 
-globalThis.MEU_PLUXEE_API_BASE = "";
+globalThis.MEU_PLUXEE_API_BASE = "https://carteira-financas.onrender.com";
 
 globalThis.MEU_PLUXEE_FIREBASE_CONFIG = {
   apiKey: "",
